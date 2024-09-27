@@ -1,0 +1,29 @@
+-- create vendors table
+CREATE OR REPLACE TABLE MYLIB/VENDORS
+(
+ VEN_NBR INT CHECK (VEN_NBR > 0) NOT NULL,
+ VEN_NAM CHAR(30) NOT NULL,
+ VEN_ADR CHAR(40) NOT NULL,
+ VEN_CON CHAR(30) NOT NULL,
+ VEN_TID CHAR(9) NOT NULL,
+ VEN_ACT CHAR(1) NOT NULL
+) RCDFMT RVEN
+  ON REPLACE PRESERVE ROWS;
+
+-- add primary key
+ALTER TABLE MYLIB/VENDORS
+ ADD PRIMARY KEY(VEN_NBR) ;
+
+-- add table label (object text description)
+LABEL ON TABLE MYLIB/VENDORS IS 'Vendor Master Table' ;
+
+-- add column labels
+LABEL ON COLUMN MYLIB/VENDORS
+(
+ VEN_NBR IS 'Vendor Number',
+ VEN_NAM IS 'Vendor Name',
+ VEN_ADR IS 'Address',
+ VEN_CON IS 'Contact',
+ VEN_TID IS 'Tax ID',
+ VEN_ACT IS 'Active?'
+) ;
