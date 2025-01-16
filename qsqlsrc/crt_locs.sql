@@ -22,7 +22,7 @@ LABEL ON COLUMN MYLIB/LOCATIONS
  LOC_CAP IS 'Capacity'
 ) ;
 
--- add column labels
+-- add field text labels
 LABEL ON COLUMN MYLIB/LOCATIONS
 (
  LOC_NBR TEXT IS 'Location#',
