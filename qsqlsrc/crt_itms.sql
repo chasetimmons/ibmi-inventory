@@ -34,3 +34,15 @@ LABEL ON COLUMN MYLIB/ITEMS
  ITM_UOM IS 'UoM',
  ITM_VEN IS 'Vendor'
 ) ;
+
+-- add field text labels
+LABEL ON COLUMN MYLIB/ITEMS
+(
+ ITM_NBR TEXT IS 'Item Number',
+ ITM_NAM TEXT IS 'Item Name',
+ ITM_MIN TEXT IS 'Minimum',
+ ITM_PRC TEXT IS 'Price',
+ ITM_TYP TEXT IS 'Type',
+ ITM_UOM TEXT IS 'UoM',
+ ITM_VEN TEXT IS 'Vendor'
+) ;
