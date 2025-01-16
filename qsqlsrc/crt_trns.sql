@@ -8,6 +8,7 @@ CREATE OR REPLACE TABLE MYLIB/TRANS
  TRN_LOC INT NOT NULL,
  TRN_QTY INT NOT NULL,
  TRN_TYP CHAR(3) NOT NULL,
+ TRN_NOT CHAR(50),
  TRN_TIM TIMESTAMP FOR EACH ROW ON UPDATE AS ROW CHANGE TIMESTAMP NOT NULL,
  TRN_USR CHAR(10) NOT NULL
 ) RCDFMT RTRN
@@ -30,6 +31,20 @@ LABEL ON COLUMN MYLIB/TRANS
  TRN_LOC IS 'Location',
  TRN_QTY IS 'Quantity',
  TRN_TYP IS 'Type',
+ TRN_NOT IS 'Note',
  TRN_TIM IS 'Updated',
  TRN_USR IS 'User'
 ) ;
+
+-- add field text labels        
+LABEL ON COLUMN CMTLIB/TRANS    
+(                               
+ TRN_NBR TEXT IS 'Transaction#',
+ TRN_ITM TEXT IS 'Item',        
+ TRN_LOC TEXT IS 'Location',    
+ TRN_QTY TEXT IS 'Quantity',    
+ TRN_TYP TEXT IS 'Type',        
+ TRN_NOT TEXT IS 'Note',        
+ TRN_TIM TEXT IS 'Updated',     
+ TRN_USR TEXT IS 'User'         
+ ) ;
