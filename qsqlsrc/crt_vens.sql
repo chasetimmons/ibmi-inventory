@@ -27,3 +27,14 @@ LABEL ON COLUMN MYLIB/VENDORS
  VEN_TID IS 'Tax ID',
  VEN_ACT IS 'Active?'
 ) ;
+
+-- add column labels
+LABEL ON COLUMN MYLIB/VENDORS
+(
+ VEN_NBR TEXT IS 'Vendor Number',
+ VEN_NAM TEXT IS 'Vendor Name',
+ VEN_ADR TEXT IS 'Address',
+ VEN_CON TEXT IS 'Contact',
+ VEN_TID TEXT IS 'Tax ID',
+ VEN_ACT TEXT IS 'Active?'
+) ;
