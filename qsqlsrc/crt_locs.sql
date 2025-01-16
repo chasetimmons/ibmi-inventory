@@ -21,3 +21,11 @@ LABEL ON COLUMN MYLIB/LOCATIONS
  LOC_NAM IS 'Name',
  LOC_CAP IS 'Capacity'
 ) ;
+
+-- add column labels
+LABEL ON COLUMN MYLIB/LOCATIONS
+(
+ LOC_NBR TEXT IS 'Location#',
+ LOC_NAM TEXT IS 'Name',
+ LOC_CAP TEXT IS 'Capacity'
+) ;
