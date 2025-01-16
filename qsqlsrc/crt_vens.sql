@@ -28,7 +28,7 @@ LABEL ON COLUMN MYLIB/VENDORS
  VEN_ACT IS 'Active?'
 ) ;
 
--- add column labels
+-- add field text labels
 LABEL ON COLUMN MYLIB/VENDORS
 (
  VEN_NBR TEXT IS 'Vendor Number',
